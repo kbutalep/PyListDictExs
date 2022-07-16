@@ -118,14 +118,19 @@ def list_from_range_by(n, step):
     This function returns list with 0..n as integers by step in a list
     (read the test)
     """
-    pass # implement me
+    return(list(range(0, n, step)))
+
+    #pass # implement me
 
 def rev_list(lst):
     """
     This function returns list which is a reverse of the argument list
     (read the test)
     """
-    pass # implement me
+    reverse = lst[::-1]
+    return(reverse)
+
+    #pass # implement me
   
 def concat_list_indexwise(lst1, lst2):
     """
@@ -141,20 +146,32 @@ def square_each_item(lst):
     This function returns list which each item in argument list has been squared
     (read the test)
     """
-    pass # implement me
+    for i in lst:
+        i ** 2
+        new_list = []
+        new_list.append(i)
+
+    return(new_list)
+
+    #pass # implement me
 
 def remove_empty_strs(lst):
      """
      Remove empty strings from the list of strings
      """
-     pass
+     remove = lst.remove('')
+     return(lst)
+
+     #pass
 
 
 def remove_item_from(lst, aaa):
     """
     Remove all occurrences of a specific item from a list.
     """
-    pass
+    remove = lst.remove_all(aaa)
+    return(lst)
+    #pass
 
 def leave_item_in(lst, aaa):
     """
@@ -166,4 +183,5 @@ def length_of(lst):
     """
     return the length of the list
     """
-    pass
+    return(len(lst))
+    #pass
