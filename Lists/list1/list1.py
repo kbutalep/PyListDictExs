@@ -7,59 +7,75 @@ def create_list_from_tuple(t):
     """
     This function takes a tuple of elements and returns a list containing those elements of the tuple.
     """
-    pass  # implement me
+    return(list(t))
+    #pass  # implement me
     
 def drop_last(lst):
     """
     This function takes a list and returns a list with the last item removed.
     """
-    pass  # implement me
+    del lst[len(lst)-1]
+    return(lst)
+    #pass # implement me
 
 
 def drop_first_two(lst):
     """
     This function takes a list and returns a list with the first two items removed.
     """
-    pass  # implement me
+    return(lst[2:])
+    #pass  # implement me
 
 def drop_mangle(lst):
     """
     This function takes a list and returns a list with the first two items AND last item removed.
     """
-    pass  # implement me
+    return(lst[2:(len(lst)-1)])
+
+    #pass  # implement me
 
 def add_item_front(lst, a):
     """
     This function takes a list and an item,
     returning the list with the item prepended to the list
     """
-    pass  # implement me
+    lst.insert(0, a)
+    return(lst)
+   # pass  # implement me
 
 def add_item_end(lst, a):
     """
     This function takes a list and an item,
     returning the list with the item appended to the list
     """
-    pass  # implement me
+    lst.append(a)
+    return(lst)
+    #pass  # implement me
 
 def add_list_to_list(lsta, lstb):
     """
     This function takes two lists and appends one to the other,
     returning a list
     """
-    pass  # implement me
+    lsta.extend(lstb)
+    return(lsta)
+    #pass  # implement me
 
 def list_and_list_to_tuple(lsta, lstb):
     """
     This function takes two lists and returns a tuple containing the two lists
     """
-    pass # implement me
+    tuple_list = tuple([lsta] + [lstb])
+    return(tuple_list)
+    #pass # implement me
 
 def list_and_list_to_list(lsta, lstb):
     """
     This function takes two lists and returns a list containing the two lists
     """
-    pass # implement me
+    new_lst = lsta + lstb
+    return(new_lst)
+    #pass # implement me
 
 ##
 ##
@@ -69,25 +85,33 @@ def list_from_range(n):
     """
     This function returns list with 0..n as integers in a list
     """
-    pass # implement me
+    return(list(range(n)))
+    #pass # implement me
 
 def list_from_range2(n, m):
     """
     This function returns list with n..m (without m) as integers in a list
     """
-    pass # implement me
+
+    return(list(range(n, m)))
+
+    #pass # implement me
 
 def list_from_range3(n, m):
     """
     This function returns list with n..m (including m(!)) as integers in a list
     """
-    pass # implement me
+    return(list(range(n, m+1)))
+
+    #pass # implement me
 
 def list_from_range4(n, m):
     """
     This function returns list with n..m (WITHOUT n and including m) as integers in a list
     """
-    pass # implement me
+    return(list(range(n+1, m+1)))
+
+    #pass # implement me
 
 def list_from_range_by(n, step):
     """
