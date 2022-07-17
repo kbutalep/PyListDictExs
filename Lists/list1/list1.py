@@ -73,8 +73,8 @@ def list_and_list_to_list(lsta, lstb):
     """
     This function takes two lists and returns a list containing the two lists
     """
-    new_lst = lsta + lstb
-    return(new_lst)
+
+    return[lsta, lstb]
     #pass # implement me
 
 ##
@@ -139,19 +139,18 @@ def concat_list_indexwise(lst1, lst2):
     then the 1st index item, and so on till the last element. 
     Any leftover items will get added at the end of the new list.
     """
-    parseString # implement me
+
+    return [ a + b for a, b in zip(lst1, lst2)]
+    #parseString # implement me
 
 def square_each_item(lst):
     """
     This function returns list which each item in argument list has been squared
     (read the test)
     """
-    for i in lst:
-        i ** 2
-        new_list = []
-        new_list.append(i)
 
-    return(new_list)
+
+    return[x ** 2 for x in lst]
 
     #pass # implement me
 
@@ -159,7 +158,7 @@ def remove_empty_strs(lst):
      """
      Remove empty strings from the list of strings
      """
-     remove = lst.remove('')
+     lst = [i for i in lst if i]
      return(lst)
 
      #pass
@@ -169,15 +168,16 @@ def remove_item_from(lst, aaa):
     """
     Remove all occurrences of a specific item from a list.
     """
-    remove = lst.remove_all(aaa)
-    return(lst)
+    return [item for item in lst if item is not aaa]
     #pass
 
 def leave_item_in(lst, aaa):
     """
     Leave all occurrences of a specific item in a list.
     """
-    pass
+    return [item for item in lst if item == aaa]
+
+    #pass
 
 def length_of(lst):
     """
